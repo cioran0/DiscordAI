@@ -61,14 +61,17 @@ async def ai(ctx, *, message=None):
                          "content": jsonValue
                          }
                     ],   
+                    "max_tokens": 500
             })
         )
         data =response.json() #needs to be called data and json no idea
         #print(f'data {data}')
         info = data["choices"][0]["message"]["content"]
-        json_string = json.dumps(info, indent=4)
+        #json_string = json.dumps(info, indent=4)
         #print(f'At the json_string {json_string}')
-        await ctx.send(f'the answer is {info}')
+        #discord has a max of 2000 char
+        shortInfo = info[:1950] + '... LIMIT REACHED' if len(info) > 1950 else info
+        await ctx.send(f'the answer is {shortInfo}')
     except Exception as e:
         await ctx.send(f"An error occurred: {e}")
-bot.run('DISCORD_BOT_TOKEN_HERE')
+bot.run('DISCORD_BOT_TOKEN')

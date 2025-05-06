@@ -3,3 +3,5 @@ This is the SamurAI AI discord bot (using discord.py) relying on openrouter endp
 Might want to get rid of timeout could cause problems. And there was also some problems with something else I forget.
 
 You can replace the model with whichever one you want.
+
+Since discord has a limit of 2000 tokens, this will truncate responses past that and put ...continued

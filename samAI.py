@@ -29,7 +29,7 @@ async def ai(ctx, *, message=None):
             await ctx.send('Quitting program.')
             return
     try:
-        # Extract necessary information from the message
+        # Extract necessary information from the message only need value.content here, but all included in case
         author_name = value.author.name
         author_id = value.author.id
         channel_name = value.channel.name

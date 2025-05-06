@@ -30,12 +30,13 @@ async def ai(ctx, *, message=None):
             return
     try:
         # Extract necessary information from the message only need value.content here, but all included in case
+	# e.g. x = message_data.get("author_name")
         author_name = value.author.name
         author_id = value.author.id
         channel_name = value.channel.name
         channel_id = value.channel.id
-        message_content = value.content
-        # Create a dictionary with the extracted information
+        message_content = value.content #user prompt input value
+        # Create a dictionary with the extracted information (NOT USED)
         message_data = {
             "author_name": author_name,
             "author_id": author_id,
@@ -44,7 +45,7 @@ async def ai(ctx, *, message=None):
             "content": message_content
         }
 
-        # Convert the dictionary to a JSON string Send it to API as JSON
+        # Convert the -->value<--, dictionary value, or dictionary to a JSON string Send it to API as JSON
         jsonValue = json.dumps(message_content, indent=0)
 
         response = requests.post(

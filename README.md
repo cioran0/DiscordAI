@@ -4,4 +4,4 @@ Might want to get rid of timeout could cause problems. And there was also some p
 
 You can replace the model with whichever one you want.
 
-Since discord has a limit of 2000 tokens, this will truncate responses past that and put ...continued
+Since discord has a limit of 2000 tokens, this will truncate responses past that and put ...continued. Trigger ?ai aliased as ?a1 in deference to US Department of Education.

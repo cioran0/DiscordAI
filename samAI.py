@@ -65,10 +65,8 @@ async def ai(ctx, *, message=None):
             })
         )
         data =response.json() #needs to be called data and json no idea
-        #print(f'data {data}')
+        #print(f'data {data}') #diagnostic line uncomment to use
         info = data["choices"][0]["message"]["content"]
-        #json_string = json.dumps(info, indent=4)
-        #print(f'At the json_string {json_string}')
         #discord has a max of 2000 char
         shortInfo = info[:1950] + '... LIMIT REACHED' if len(info) > 1950 else info
         await ctx.send(f'the answer is {shortInfo}')

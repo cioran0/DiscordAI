@@ -2,9 +2,9 @@
 This is the template based on my SamurAI AI discord bot from one of my channels (using discord.py) relying on openrouter endpoints and using Moonlight 16b-a3b, though you could use anything. Can help with questions coding, and fun! May wish to add add'l token limits and "be helpful assistant". 
 
 Basically just: 
-*plug in your openrouter key/env var
-*And your discord bot key/ env var
-*And pick the model you want.
+* plug in your openrouter key/env var
+* And your discord bot key/ env var
+* And pick the model you want.
 
 Might want to get rid of timeout could cause problems. And there was also some problems with something else I forget.
 

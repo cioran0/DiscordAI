@@ -26,7 +26,7 @@ async def ai(ctx, *, message=None):
 
     if value.content == 'quit':
             print(f'if quit loop')
-            await ctx.send('Quitting calculator program.')
+            await ctx.send('Quitting program.')
             return
     try:
         # Extract necessary information from the message
